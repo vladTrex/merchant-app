@@ -10,6 +10,8 @@ export const merchant = (state = initialState, action) => {
     switch (action.type){
         case actionTypes.MERCHANT_ADD_MERCHANT:
             return [...state, action.payload];
+        case actionTypes.MERCHANT_FETCH_MERCHANTS:
+            return state.concat(action.payload);
     }
     return state;
 };

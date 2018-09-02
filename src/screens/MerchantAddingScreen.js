@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { addMerchant } from '../store/actions/merchant';
-import MerchantAddingForm from '../components/MerchantAdding';
+import MerchantAddingForm from '../components/MerchantAddingForm';
 
 class MerchantAddingScreen extends PureComponent {
   submit(values) {
