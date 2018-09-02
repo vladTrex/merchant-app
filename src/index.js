@@ -1,10 +1,11 @@
-import React, {PureComponent} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import {HashRouter as Router, Route, Switch, Link} from 'react-router-dom';
-import 'typeface-roboto';
+import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 import {Provider} from 'react-redux';
+import 'typeface-roboto';
 
 import Home from './screens/HomeScreen';
+import SignIn from './screens/SignInScreen';
 import About from './screens/AboutScreen';
 import Links from './components/Links';
 import MerchantAddingForm from './screens/MerchantAddingScreen';
@@ -21,6 +22,7 @@ const App = () => {
                     <Links/>
                     <Switch>
                         <Route exact path="/" component={Home}/>
+                        <Route path="/signin" component={SignIn} />
                         <Route path="/about" component={About}/>
                         <Route path="/merchant/add" component={MerchantAddingForm}/>
                     </Switch>

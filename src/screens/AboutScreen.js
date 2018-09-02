@@ -1,4 +1,7 @@
 import React from 'react';
+import {compose} from 'recompose';
+
+import AuthHOC from '../HOCs/AuthHOC';
 
 const About = () => {
     return (
@@ -6,4 +9,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default compose(AuthHOC)(About);

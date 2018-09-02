@@ -6,8 +6,8 @@ const initialState = {
 
 export const auth = (state = initialState, action) => {
     switch (action.type){
-        case actionTypes.AUTH_SET_STATUS:
-            return {...state, auth: !state.auth};
+        case actionTypes.AUTH_SIGN_IN:
+            return {...state, auth: true};
     }
     return state;
 };
