@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
-import {Redirect} from 'react-router-dom';
 
 import {addMerchant} from '../store/actions/merchant';
 import MerchantAddingForm from '../components/MerchantAdding';

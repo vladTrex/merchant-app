@@ -1,8 +1,11 @@
 import React, {PureComponent} from 'react';
 import {Field, reduxForm} from 'redux-form';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 import {
     TextField,
-} from 'redux-form-material-ui'
+    Checkbox
+} from 'redux-form-material-ui';
+
 
 import {StyledContainer} from './styles';
 
@@ -19,6 +22,9 @@ class MerchantAddingForm extends PureComponent {
                     </div>
                     <div>
                         <Field name="email" label="Email" component={TextField} type="email"/>
+                    </div>
+                    <div>
+                        <FormControlLabel control={<Field name="isPremium" component={Checkbox} /> } label="Premium account" />
                     </div>
                     <button type="submit">Submit</button>
                 </form>

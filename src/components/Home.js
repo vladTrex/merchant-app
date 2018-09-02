@@ -1,6 +1,11 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Avatar from '@material-ui/core/Avatar';
 
+import {getPrefix} from '../utils';
 
 const Home = props => {
     return (<div>
@@ -9,7 +14,12 @@ const Home = props => {
         </h2>
         <Link to="/merchant/add"> Add merchant </Link>
 
-        {props.merchants.map((item, idx) => <p key={idx}>{item.email}</p>)}
+        {props.merchants.map((item, idx) => <List key={idx}>
+            <ListItem button>
+                <Avatar>{getPrefix(item)}</Avatar>
+                <ListItemText primary={`${item.firstName} ${item.lastName}`}/>
+            </ListItem>
+        </List>)}
     </div>)
 };
 
