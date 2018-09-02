@@ -4,8 +4,8 @@ import {HashRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import 'typeface-roboto';
 import {Provider} from 'react-redux';
 
-import Home from './containers/HomeContainer';
-import About from './containers/AboutContainer';
+import Home from './screens/HomeScreen';
+import About from './screens/AboutScreen';
 import Links from './components/Links';
 
 import {store} from './store';
@@ -19,8 +19,8 @@ const App = () => {
                 <div>
                     <Links/>
                     <Switch>
-                        <Route exact path="/" render={Home}/>
-                        <Route path="/about" render={About}/>
+                        <Route exact path="/" component={Home}/>
+                        <Route path="/about" component={About}/>
                     </Switch>
                 </div>
             </Router>
@@ -28,4 +28,4 @@ const App = () => {
     );
 };
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+ReactDOM.render(<App/>, document.getElementById('root-element'));
