@@ -8,8 +8,8 @@ import { StyledContainer } from './styles';
 
 class MerchantAddingForm extends PureComponent {
   render() {
-    const {handleSubmit} = this.props;
-    
+    const { handleSubmit } = this.props;
+
     return (
       <StyledContainer>
         <form onSubmit={handleSubmit}>
@@ -51,7 +51,7 @@ class MerchantAddingForm extends PureComponent {
 }
 
 MerchantAddingForm.propTypes = {
-  handleSubmit: PropTypes.func
+  handleSubmit: PropTypes.func,
 };
 
 export default reduxForm({ form: 'merchantForm' })(MerchantAddingForm);

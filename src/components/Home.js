@@ -28,7 +28,7 @@ const Home = props => {
 
 Home.propTypes = {
   merchants: PropTypes.array,
-  auth: PropTypes.bool
+  auth: PropTypes.bool,
 };
 
 export default Home;

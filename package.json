@@ -13,7 +13,7 @@
     "check-formatting": "npm run prettier -- -l",
     "fix-formatting": "npm run prettier -- --write",
     "prepush": "npm run lint",
-    "precommit": "npm run fix-formatting"
+    "precommit": "npm run check-formatting"
   },
   "author": "",
   "license": "ISC",

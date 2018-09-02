@@ -19,7 +19,7 @@ class MerchantAddingScreen extends PureComponent {
 
 MerchantAddingScreen.propTypes = {
   addMerchant: PropTypes.func,
-  history: PropTypes.object
+  history: PropTypes.object,
 };
 
 export default connect(
