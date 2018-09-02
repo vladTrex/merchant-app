@@ -6,15 +6,15 @@ export const signIn = () => ({
     type: actionTypes.AUTH_SIGN_IN,
 });
 
-export const doSignIn = cb => dispatch => {
+export const doSignIn = cb => async dispatch => {
 
     try {
-        fetch('/store.json')
+        await fetch('/store.json')
             .then((res) => res.json())
             .then((data) => {
                 dispatch(fetchMerchants(data.merchants));
             });
-            
+
         dispatch(signIn());
 
         return cb();
