@@ -1,18 +1,26 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import Button from '@material-ui/core/Button';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-import {signIn} from '../store/actions/auth';
+import { signIn } from '../store/actions/auth';
 
-const SignIn = ({signIn}) => {
-    return (
-        <Fragment>
-            <h2>Please Sign In</h2>
-            <Button onClick={signIn} variant="contained" color="secondary">
-                Click Here
-            </Button>
-        </Fragment>
-    );
+const SignIn = ({ signIn }) => {
+  return (
+    <Fragment>
+      <h2>Please Sign In</h2>
+      <Button onClick={signIn} variant="contained" color="secondary">
+        Click Here
+      </Button>
+    </Fragment>
+  );
 };
 
-export default connect(null, {signIn})(SignIn);
+SignIn.propTypes = {
+  signIn: PropTypes.func,
+};
+
+export default connect(
+  null,
+  { signIn }
+)(SignIn);

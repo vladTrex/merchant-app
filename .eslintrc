@@ -19,11 +19,9 @@
       "jsx": true
     }
   },
-  "plugins": ["react", "react-native", "prettier", "jest"],
+  "plugins": ["react", "prettier", "jest"],
   "rules": {
     "quotes": [2, "single"],
-    "react-native/no-unused-styles": 2,
-    "react-native/no-inline-styles": 2,
     "no-console": "error",
     "import/no-unresolved": [2, { "commonjs": true, "amd": true}],
     "block-spacing": "error",

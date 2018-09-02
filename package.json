@@ -7,7 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "generate-store": "babel-node ./src/ci_scripts/generateStore.js"
+    "generate-store": "babel-node ./src/ci_scripts/generateStore.js",
+    "lint": "echo 'Linting your code ...' && eslint ./src/** && echo 'Eslint: Your code looks ok'",
+    "prettier": "prettier --trailing-comma es5 --tab-width 2 --use-tabs false --single-quote ./src/**/*.js",
+    "check-formatting": "npm run prettier -- -l",
+    "fix-formatting": "npm run prettier -- --write"
   },
   "author": "",
   "license": "ISC",

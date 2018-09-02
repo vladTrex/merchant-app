@@ -5,9 +5,9 @@ import { createLogger } from 'redux-logger';
 import rootReducer from './reducers';
 
 const logger = createLogger({
-    collapsed: true
+  collapsed: true,
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 
-export {store};
+export { store };

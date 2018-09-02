@@ -15,21 +15,19 @@ import {store} from './store';
 window.store = store;
 
 const App = () => {
-    return (
-        <Provider store={store}>
-            <Router>
-                <div>
-                    <Links/>
-                    <Switch>
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/signin" component={SignIn} />
-                        <Route path="/about" component={About}/>
-                        <Route path="/merchant/add" component={MerchantAddingForm}/>
-                    </Switch>
-                </div>
-            </Router>
-        </Provider>
-    );
+    return <Provider store={store}>
+      <Router>
+        <div>
+          <Links/>
+          <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route path="/signin" component={SignIn}/>
+            <Route path="/about" component={About}/>
+            <Route path="/merchant/add" component={MerchantAddingForm}/>
+          </Switch>
+        </div>
+      </Router>
+    </Provider>;
 };
 
 ReactDOM.render(<App/>, document.getElementById('root-element'));

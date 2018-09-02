@@ -2,11 +2,9 @@
 // remove merchant
 // update merchant
 
-
-import * as actionTypes from "../../constants/actionTypes";
+import * as actionTypes from '../../constants/actionTypes';
 
 const initialState = [];
-
 
 export const merchant = (state = initialState, action) => {
     switch (action.type){
