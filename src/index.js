@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 import Home from './screens/HomeScreen';
 import About from './screens/AboutScreen';
 import Links from './components/Links';
+import MerchantAddingForm from './screens/MerchantAddingScreen';
 
 import {store} from './store';
 
@@ -21,6 +22,7 @@ const App = () => {
                     <Switch>
                         <Route exact path="/" component={Home}/>
                         <Route path="/about" component={About}/>
+                        <Route path="/merchant/add" component={MerchantAddingForm}/>
                     </Switch>
                 </div>
             </Router>
