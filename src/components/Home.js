@@ -1,27 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 import Avatar from '@material-ui/core/Avatar';
 import PropTypes from 'prop-types';
+import Button from '@material-ui/core/Button';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 import { getPrefix } from '../utils';
+import MerchantTableRow from './MerchantTableRow';
 
 const Home = props => {
+  const AddMerchantLink = props => <Link to="/merchant/add" {...props} />
+
   return (
     <div>
       <h2>{props.auth && 'Welcome user'} Home - Merchant App!</h2>
-      <Link to="/merchant/add"> Add merchant </Link>
-
-      {props.merchants.map((item, idx) => (
-        <List key={idx}>
-          <ListItem button>
-            <Avatar>{getPrefix(item)}</Avatar>
-            <ListItemText primary={`${item.firstName} ${item.lastName}`} />
-          </ListItem>
-        </List>
-      ))}
+      <Button variant="contained" color="primary" component={AddMerchantLink}> Add merchant </Button>
+      <br />
+      <br />
+      <Paper>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell />
+              <TableCell>Name</TableCell>
+              <TableCell>Email</TableCell>
+              <TableCell>Phone</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {props.merchants.map(item => (
+              <MerchantTableRow key={item.id} item={item} />
+            ))}
+          </TableBody>
+        </Table>
+      </Paper>
     </div>
   );
 };
