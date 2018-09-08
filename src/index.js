@@ -7,7 +7,7 @@ import 'typeface-roboto';
 import Home from './screens/HomeScreen';
 import SignIn from './screens/SignInScreen';
 import About from './screens/AboutScreen';
-import Links from './components/Links';
+import Navigation from './components/Navigation';
 import MerchantAddingForm from './screens/MerchantAddingScreen';
 
 import {store} from './store';
@@ -18,7 +18,7 @@ const App = () => {
     return <Provider store={store}>
       <Router>
         <div>
-          <Links/>
+          <Navigation/>
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/signin" component={SignIn}/>

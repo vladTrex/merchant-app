@@ -4,7 +4,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { Link } from 'react-router-dom';
 
-class Links extends PureComponent {
+class Navigation extends PureComponent {
   constructor() {
     super();
 
@@ -32,4 +32,4 @@ class Links extends PureComponent {
   }
 }
 
-export default Links;
+export default Navigation;
