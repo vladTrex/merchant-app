@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 
 const SignIn = ({ handleSignIn }) => {
