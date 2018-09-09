@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
 import { compose } from 'recompose';
 
-import Home from '../components/Home';
+import { getMerchantById } from '../store/selectors/merchant';
+import Merchant from '../components/Merchant';
 import AuthHOC from '../HOCs/AuthHOC';
-import { getAllMerchants } from '../store/selectors/merchant';
-
+import { getIsDialogOpen } from '../store/selectors/ui';
 import { setOpenDialog } from '../store/actions/ui';
 import { onRemoveMerchant } from '../store/actions/merchant';
 
-const mapStateToProps = state => ({
-  auth: state.app.auth,
-  merchants: getAllMerchants(state),
+const mapStateToProps = (state, ownProps) => ({
+  merchant: getMerchantById(state, ownProps.match.params.id),
+  isDialogOpen: getIsDialogOpen(state),
 });
 
 export default compose(
@@ -19,4 +19,4 @@ export default compose(
     { setOpenDialog, onRemoveMerchant }
   ),
   AuthHOC
-)(Home);
+)(Merchant);

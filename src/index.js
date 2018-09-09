@@ -9,6 +9,7 @@ import SignIn from './screens/SignInScreen';
 import About from './screens/AboutScreen';
 import Navigation from './components/Navigation';
 import MerchantAddingForm from './screens/MerchantAddingScreen';
+import Merchant from './screens/MerchantScreen';
 
 import {store} from './store';
 
@@ -24,6 +25,7 @@ const App = () => {
             <Route path="/signin" component={SignIn}/>
             <Route path="/about" component={About}/>
             <Route path="/merchant/add" component={MerchantAddingForm}/>
+            <Route path="/merchant/:id" component={Merchant}/>
           </Switch>
         </div>
       </Router>

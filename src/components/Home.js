@@ -9,15 +9,17 @@ import Paper from '@material-ui/core/Paper';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 
-import MerchantTableRow from './MerchantTableRow';
+import MerchantTableRow from './partials/MerchantTableRow';
 
 const Home = props => {
-  const AddMerchantLink = props => <Link to="/merchant/add" {...props} />
+  const AddMerchantLink = props => <Link to="/merchant/add" {...props} />;
 
   return (
     <div>
       <h2>{props.auth && 'Welcome user'} Home - Merchant App!</h2>
-      <Button variant="contained" color="primary" component={AddMerchantLink}> Add merchant </Button>
+      <Button variant="contained" color="primary" component={AddMerchantLink}>
+        Add merchant
+      </Button>
       <br />
       <br />
       <Paper>

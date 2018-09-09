@@ -4,7 +4,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import { TextField, Checkbox } from 'redux-form-material-ui';
 import PropTypes from 'prop-types';
 
-import { StyledContainer } from './styles';
+import { StyledContainer } from './partials/styles';
 
 class MerchantAddingForm extends PureComponent {
   render() {
