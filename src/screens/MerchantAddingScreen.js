@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import v4 from 'uuid/v4';
 
 import { addMerchant } from '../store/actions/merchant';
 import MerchantAddingForm from '../components/MerchantAddingForm';
@@ -8,9 +9,10 @@ import MerchantAddingForm from '../components/MerchantAddingForm';
 class MerchantAddingScreen extends PureComponent {
   submit(values) {
     const { addMerchant, history } = this.props;
+    const merchantId = v4();
 
-    addMerchant(values);
-    return history.push('/');
+    addMerchant(Object.assign({}, values, { id: merchantId }));
+    return history.push(`/merchant/${merchantId}`);
   }
   render() {
     return <MerchantAddingForm onSubmit={this.submit.bind(this)} />;
