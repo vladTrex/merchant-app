@@ -4,6 +4,7 @@ import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react'
 import 'typeface-roboto';
+import '../dist/style.css';
 
 import Home from './screens/HomeScreen';
 import SignIn from './screens/SignInScreen';
