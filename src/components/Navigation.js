@@ -14,7 +14,9 @@ class Navigation extends PureComponent {
   }
 
   handleChange(event, value) {
-    this.setState({ selectedValue: value });
+    event.preventDefault();
+
+    return this.setState({ selectedValue: value });
   }
 
   render() {

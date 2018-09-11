@@ -8,7 +8,7 @@ import 'typeface-roboto';
 import Home from './screens/HomeScreen';
 import SignIn from './screens/SignInScreen';
 import About from './screens/AboutScreen';
-import Navigation from './components/Navigation';
+import Navigation from './screens/NavigationScreen';
 import MerchantAddingForm from './screens/MerchantAddingScreen';
 import Merchant from './screens/MerchantScreen';
 

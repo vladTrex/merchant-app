@@ -14,6 +14,8 @@ export const merchants = (state = initialState, action) => {
             return state.concat(action.payload);
         case actionTypes.MERCHANT_REMOVE_MERCHANT:
             return state.filter(merchant => merchant.id !== action.payload.merchantId);
+        case actionTypes.AUTH_SIGN_OUT:
+            return initialState;
     }
     return state;
 };
