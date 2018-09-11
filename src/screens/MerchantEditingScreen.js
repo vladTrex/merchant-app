@@ -1,9 +1,8 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import v4 from 'uuid/v4';
 
-import { addMerchant } from '../store/actions/merchant';
+import { onEditMechant } from '../store/actions/merchant';
 import MerchantEditing from '../components/MerchantEditing';
 import { getMerchantById } from '../store/selectors/merchant';
 
@@ -12,13 +11,12 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 class MerchantEditingScreen extends PureComponent {
-  submit(values) {
-    console.log(values);
-    // const { addMerchant, history } = this.props;
-    // const merchantId = v4();
-    //
-    // addMerchant(Object.assign({}, values, { id: merchantId }));
-    // return history.push(`/merchant/${merchantId}`);
+  submit(merchant) {
+    const { onEditMechant, history, match } = this.props;
+    const merchantId = match.params.id;
+
+    onEditMechant(Object.assign({}, merchant, { id: merchantId }));
+    return history.push(`/merchant/${merchantId}`);
   }
   render() {
     const { merchant } = this.props;
@@ -30,12 +28,13 @@ class MerchantEditingScreen extends PureComponent {
 }
 
 MerchantEditingScreen.propTypes = {
-  addMerchant: PropTypes.func,
+  onEditMechant: PropTypes.func,
   history: PropTypes.object,
   merchant: PropTypes.object.isRequired,
+  match: PropTypes.object.isRequired,
 };
 
 export default connect(
   mapStateToProps,
-  { addMerchant }
+  { onEditMechant }
 )(MerchantEditingScreen);

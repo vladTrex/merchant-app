@@ -33,6 +33,7 @@ const Home = props => {
               <TableCell>Name</TableCell>
               <TableCell>Email</TableCell>
               <TableCell>Phone</TableCell>
+              <TableCell />
             </TableRow>
           </TableHead>
           <TableBody>

@@ -16,9 +16,18 @@ export const fetchMerchants = merchants => ({
     payload: merchants
 });
 
+export const editMerchant = merchant => ({
+    type: actionTypes.MERCHANT_EDIT_MERCHANT,
+    payload: merchant
+});
+
 // thunks
 export const onRemoveMerchant = (merchantId, cb) => dispatch => {
     dispatch(setOpenDialog());
     dispatch(removeMerchant(merchantId));
     return cb();
+};
+
+export const onEditMechant = merchant => dispatch => {
+    dispatch(editMerchant(merchant));
 };
