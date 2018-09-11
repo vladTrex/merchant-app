@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { getAuth } from '../store/selectors/auth';
+
 export default ChildComponent => {
   class ComposedComponent extends Component {
     componentDidMount() {
@@ -23,7 +25,7 @@ export default ChildComponent => {
   }
 
   function mapStateToProps(state) {
-    return { auth: state.app.auth };
+    return { auth: getAuth(state) };
   }
 
   return connect(mapStateToProps)(ComposedComponent);

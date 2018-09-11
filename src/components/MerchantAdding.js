@@ -5,6 +5,7 @@ import { TextField, Checkbox } from 'redux-form-material-ui';
 import PropTypes from 'prop-types';
 
 import { StyledContainer } from './partials/styles';
+import { email, required, validate } from './utils/forms';
 
 class MerchantAdding extends PureComponent {
   render() {
@@ -18,6 +19,7 @@ class MerchantAdding extends PureComponent {
               name="firstName"
               label="First Name"
               component={TextField}
+              validate={required}
               type="text"
             />
           </div>
@@ -26,6 +28,7 @@ class MerchantAdding extends PureComponent {
               name="lastName"
               label="Last Name"
               component={TextField}
+              validate={required}
               type="text"
             />
           </div>
@@ -34,7 +37,16 @@ class MerchantAdding extends PureComponent {
               name="email"
               label="Email"
               component={TextField}
+              validate={[required, email]}
               type="email"
+            />
+          </div>
+          <div>
+            <Field
+              name="phoneNumber"
+              label="Phone number"
+              component={TextField}
+              type="text"
             />
           </div>
           <div>
@@ -52,6 +64,7 @@ class MerchantAdding extends PureComponent {
 
 MerchantAdding.propTypes = {
   handleSubmit: PropTypes.func,
+  initialize: PropTypes.func,
 };
 
-export default reduxForm({ form: 'merchantForm' })(MerchantAdding);
+export default reduxForm({ form: 'merchantAdd', validate })(MerchantAdding);

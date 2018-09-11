@@ -9,7 +9,8 @@ import Home from './screens/HomeScreen';
 import SignIn from './screens/SignInScreen';
 import About from './screens/AboutScreen';
 import Navigation from './components/Navigation';
-import MerchantAddingForm from './screens/MerchantAddingScreen';
+import MerchantAddingScreen from './screens/MerchantAddingScreen';
+import MerchantEditingScreen from './screens/MerchantEditingScreen';
 import Merchant from './screens/MerchantScreen';
 
 import {store, persistor} from './store';
@@ -26,7 +27,8 @@ const App = () => {
               <Route exact path="/" component={Home}/>
               <Route path="/signin" component={SignIn}/>
               <Route path="/about" component={About}/>
-              <Route path="/merchant/add" component={MerchantAddingForm}/>
+              <Route path="/merchant/add" component={MerchantAddingScreen}/>
+              <Route path="/merchant/edit/:id" component={MerchantEditingScreen}/>
               <Route path="/merchant/:id" component={Merchant}/>
             </Switch>
           </div>

@@ -15,9 +15,13 @@ const MerchantTableRow = ({ item }) => {
       </TableCell>
       <TableCell>
         <Link to={`/merchant/${item.id}`}>{`${item.firstName} ${item.lastName}`}</Link>
+
       </TableCell>
       <TableCell>{item.email}</TableCell>
       <TableCell>{item.phone}</TableCell>
+        <TableCell>
+            <Link to={`/merchant/edit/${item.id}`}>Edit</Link>
+        </TableCell>
     </TableRow>
   );
 };
