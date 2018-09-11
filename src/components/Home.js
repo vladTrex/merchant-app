@@ -20,7 +20,9 @@ const Home = props => {
       <Button variant="contained" color="primary" component={AddMerchantLink}>
         Add merchant
       </Button>
-      <Button variant="contained" color="secondary" onClick={props.doSignOut}>Sign Out</Button>
+      <Button variant="contained" color="secondary" onClick={props.doSignOut}>
+        Sign Out
+      </Button>
       <br />
       <br />
       <Paper>
@@ -47,7 +49,7 @@ const Home = props => {
 Home.propTypes = {
   merchants: PropTypes.array,
   auth: PropTypes.bool,
-    doSignOut: PropTypes.func,
+  doSignOut: PropTypes.func,
 };
 
 export default Home;

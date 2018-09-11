@@ -8,7 +8,7 @@ import { getAuth } from '../store/selectors/auth';
 
 import { setOpenDialog } from '../store/actions/ui';
 import { onRemoveMerchant } from '../store/actions/merchant';
-import {doSignOut} from '../store/actions/auth';
+import { doSignOut } from '../store/actions/auth';
 
 const mapStateToProps = state => ({
   auth: getAuth(state),
