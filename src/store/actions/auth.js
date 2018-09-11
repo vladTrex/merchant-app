@@ -7,6 +7,11 @@ export const signIn = () => ({
     type: actionTypes.AUTH_SIGN_IN,
 });
 
+export const signOut = () => ({
+    type: actionTypes.AUTH_SIGN_OUT
+});
+
+// thunks
 export const doSignIn = cb => async dispatch => {
 
     try {
@@ -24,10 +29,6 @@ export const doSignIn = cb => async dispatch => {
         throw new Error();
     }
 };
-
-export const signOut = () => ({
-    type: actionTypes.AUTH_SIGN_OUT
-});
 
 export const doSignOut = () => dispatch => {
     dispatch(signOut());

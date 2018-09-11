@@ -14,9 +14,11 @@ class MerchantEditingScreen extends PureComponent {
   submit(merchant) {
     const { onEditMechant, history, match } = this.props;
     const merchantId = match.params.id;
+    const updatedMerchant = Object.assign({}, merchant, { id: merchantId });
 
-    onEditMechant(Object.assign({}, merchant, { id: merchantId }));
-    return history.push(`/merchant/${merchantId}`);
+    return onEditMechant(updatedMerchant, () =>
+      history.push(`/merchant/${merchantId}`)
+    );
   }
   render() {
     const { merchant } = this.props;

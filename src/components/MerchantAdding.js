@@ -43,7 +43,7 @@ class MerchantAdding extends PureComponent {
           </div>
           <div>
             <Field
-              name="phoneNumber"
+              name="phone"
               label="Phone number"
               component={TextField}
               type="text"

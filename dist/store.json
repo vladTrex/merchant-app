@@ -13,7 +13,7 @@
             "firstName": "Jane",
             "lastName": "Doe",
             "email": "jane.doe@gmail.com",
-            "isPremium": false,
+            "isPremium": true,
             "phone": "3233231212",
             "bids": [],
             "id": "2407c013-fd74-4e9b-9c89-cde5cca5799e"

@@ -16,7 +16,7 @@ const Home = props => {
 
   return (
     <div>
-      <h2>{props.auth && 'Welcome user'} Home - Merchant App!</h2>
+      <h2>{props.auth && 'Welcome user'}</h2>
       <Button variant="contained" color="primary" component={AddMerchantLink}>
         Add merchant
       </Button>
@@ -30,10 +30,11 @@ const Home = props => {
           <TableHead>
             <TableRow>
               <TableCell />
+              <TableCell />
               <TableCell>Name</TableCell>
               <TableCell>Email</TableCell>
               <TableCell>Phone</TableCell>
-              <TableCell />
+              <TableCell>Edit</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

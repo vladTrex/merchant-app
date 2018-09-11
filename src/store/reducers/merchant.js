@@ -1,7 +1,3 @@
-// add merchant
-// remove merchant
-// update merchant
-
 import * as actionTypes from '../../constants/actionTypes';
 
 const initialState = [];

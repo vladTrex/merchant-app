@@ -19,7 +19,7 @@ class MerchantEditing extends PureComponent {
       firstName: merchant.firstName,
       lastName: merchant.lastName,
       email: merchant.email,
-      phoneNumber: merchant.phone,
+      phone: merchant.phone,
     };
 
     initialize(initData);
@@ -60,7 +60,7 @@ class MerchantEditing extends PureComponent {
           </div>
           <div>
             <Field
-              name="phoneNumber"
+              name="phone"
               label="Phone number"
               component={TextField}
               type="text"
