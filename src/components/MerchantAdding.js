@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 import { StyledContainer } from './partials/styles';
 
-class MerchantAddingForm extends PureComponent {
+class MerchantAdding extends PureComponent {
   render() {
     const { handleSubmit } = this.props;
 
@@ -50,8 +50,8 @@ class MerchantAddingForm extends PureComponent {
   }
 }
 
-MerchantAddingForm.propTypes = {
+MerchantAdding.propTypes = {
   handleSubmit: PropTypes.func,
 };
 
-export default reduxForm({ form: 'merchantForm' })(MerchantAddingForm);
+export default reduxForm({ form: 'merchantForm' })(MerchantAdding);

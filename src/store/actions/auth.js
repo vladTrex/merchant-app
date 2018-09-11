@@ -1,4 +1,5 @@
 import * as actionTypes from '../../constants/actionTypes';
+import {persistor} from '../index';
 
 import {fetchMerchants} from './merchant';
 
@@ -22,4 +23,13 @@ export const doSignIn = cb => async dispatch => {
     } catch (e) {
         throw new Error();
     }
+};
+
+export const signOut = () => ({
+    type: actionTypes.AUTH_SIGN_OUT
+});
+
+export const doSignOut = () => dispatch => {
+    dispatch(signOut());
+    return persistor.purge();
 };

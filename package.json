@@ -15,7 +15,7 @@
     "prepush": "npm run lint",
     "precommit": "npm run check-formatting"
   },
-  "author": "",
+  "author": "Vladyslav Tertyshnyi",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.0.0",

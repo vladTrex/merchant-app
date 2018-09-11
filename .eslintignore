@@ -1,3 +1,4 @@
 **/*.js.snap
 /dist
 /ci_scripts
+webpack.config.js

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import v4 from 'uuid/v4';
 
 import { addMerchant } from '../store/actions/merchant';
-import MerchantAddingForm from '../components/MerchantAddingForm';
+import MerchantAddingForm from '../components/MerchantAdding';
 
 class MerchantAddingScreen extends PureComponent {
   submit(values) {
