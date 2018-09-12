@@ -2,6 +2,7 @@ import * as actionTypes from '../../constants/actionTypes';
 import {persistor} from '../index';
 
 import {fetchMerchants} from './merchant';
+import {setActiveTab} from './ui';
 
 export const signIn = () => ({
     type: actionTypes.AUTH_SIGN_IN,
@@ -22,6 +23,7 @@ export const doSignIn = cb => async dispatch => {
             });
 
         dispatch(signIn());
+        dispatch(setActiveTab());
 
         return cb();
 

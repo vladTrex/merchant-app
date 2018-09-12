@@ -20,9 +20,6 @@ const Home = props => {
       <Button variant="contained" color="primary" component={AddMerchantLink}>
         Add merchant
       </Button>
-      <Button variant="contained" color="secondary" onClick={props.doSignOut}>
-        Sign Out
-      </Button>
       <br />
       <br />
       <Paper>

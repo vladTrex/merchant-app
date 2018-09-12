@@ -4,12 +4,13 @@ import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react'
 import 'typeface-roboto';
+
 import '../dist/style.css';
 
 import Home from './screens/HomeScreen';
 import SignIn from './screens/SignInScreen';
 import About from './screens/AboutScreen';
-import Navigation from './components/Navigation';
+import Navigation from './screens/NavigationScreen';
 import MerchantAddingScreen from './screens/MerchantAddingScreen';
 import MerchantEditingScreen from './screens/MerchantEditingScreen';
 import Merchant from './screens/MerchantScreen';
@@ -25,7 +26,7 @@ const App = () => {
           <div>
             <Navigation/>
             <Switch>
-              <Route exact path="/" component={Home}/>
+              <Route exact path="/" replace component={Home}/>
               <Route path="/signin" component={SignIn}/>
               <Route path="/about" component={About}/>
               <Route path="/merchant/add" component={MerchantAddingScreen}/>

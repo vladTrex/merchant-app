@@ -10,6 +10,8 @@ export default (state = initialState, action) => {
     switch (action.type){
         case actionTypes.UI_IS_DIALOG_OPEN:
             return {...state, isDialogOpen: !state.isDialogOpen};
+        case actionTypes.UI_SET_ACTIVE_TAB:
+            return {...state, activeTab: action.payload}
         case actionTypes.AUTH_SIGN_OUT:
             return initialState;
     }
