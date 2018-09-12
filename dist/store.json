@@ -120,7 +120,7 @@
             "firstName": "Otto",
             "lastName": "Dix",
             "email": "otto.dix@gmail.com",
-            "isPremium": false,
+            "isPremium": true,
             "phone": "3233231212",
             "bids": [
                 {

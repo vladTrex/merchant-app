@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import PromptDialog from './partials/PromptDialog';
 import Button from '@material-ui/core/Button';
@@ -54,22 +54,33 @@ const Merchant = ({
       </StyledHeaderActions>
       <MerchantList merchant={merchant} />
       <h2>Bids</h2>
-      <Button variant="flat" color="primary" size="small" onClick={sortByTitle}>
-        Sort by title
-      </Button>
-      <Button
-        variant="flat"
-        color="primary"
-        size="small"
-        onClick={sortType === 'desc' ? sortByDateAsc : sortByDateDesc}
-      >
-        {sortType === 'desc' ? (
-          <strong>Sort by date ascending</strong>
-        ) : (
-          <strong>Sort by date descending</strong>
-        )}
-      </Button>
-      <Bids bids={filteredBids} />
+      {isEmpty(filteredBids) ? (
+        <p>No bids</p>
+      ) : (
+        <Fragment>
+          <Button
+            variant="flat"
+            color="primary"
+            size="small"
+            onClick={sortByTitle}
+          >
+            Sort by title
+          </Button>
+          <Button
+            variant="flat"
+            color="primary"
+            size="small"
+            onClick={sortType === 'desc' ? sortByDateAsc : sortByDateDesc}
+          >
+            {sortType === 'desc' ? (
+              <strong>Sort by date ascending</strong>
+            ) : (
+              <strong>Sort by date descending</strong>
+            )}
+          </Button>
+          <Bids bids={filteredBids} />
+        </Fragment>
+      )}
 
       <PromptDialog
         handleOk={() => onRemoveMerchant(merchant.id, () => history.push('/'))}

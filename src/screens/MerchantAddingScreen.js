@@ -13,7 +13,7 @@ class MerchantAddingScreen extends PureComponent {
     const { addMerchant, history } = this.props;
     const merchantId = v4();
 
-    addMerchant(Object.assign({}, values, { id: merchantId }));
+    addMerchant(Object.assign({}, values, { id: merchantId, bids: [] }));
     return history.push(`/merchant/${merchantId}`);
   }
   render() {

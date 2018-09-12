@@ -9,7 +9,7 @@ import Paper from '@material-ui/core/Paper';
 
 import {formatDate} from '../utils/date';
 
-const Bids = ({bids}) => {
+const Bids = ({bids}) => {    
     return (
       <Paper>
         <Table>
