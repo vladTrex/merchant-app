@@ -26,7 +26,7 @@ const Merchant = ({
   const EditLink = props => (
     <Link to={`/merchant/edit/${merchant.id}`} {...props} />
   );
-  if(isEmpty(merchant)) return null;
+  if (isEmpty(merchant)) return null;
   return (
     <div>
       <StyledHeaderActions>
@@ -54,12 +54,21 @@ const Merchant = ({
       </StyledHeaderActions>
       <MerchantList merchant={merchant} />
       <h2>Bids</h2>
-      <Button variant="flat"
+      <Button variant="flat" color="primary" size="small" onClick={sortByTitle}>
+        Sort by title
+      </Button>
+      <Button
+        variant="flat"
         color="primary"
-        size="small" onClick={sortByTitle}>Sort by title</Button>
-      <Button variant="flat"
-        color="primary"
-        size="small" onClick={sortType === 'desc'? sortByDateAsc : sortByDateDesc}>{sortType === 'desc'? <strong>Sort by date ascending</strong> : <strong>Sort by date descending</strong>}</Button>
+        size="small"
+        onClick={sortType === 'desc' ? sortByDateAsc : sortByDateDesc}
+      >
+        {sortType === 'desc' ? (
+          <strong>Sort by date ascending</strong>
+        ) : (
+          <strong>Sort by date descending</strong>
+        )}
+      </Button>
       <Bids bids={filteredBids} />
 
       <PromptDialog
@@ -82,7 +91,7 @@ Merchant.propTypes = {
   sortByDateDesc: PropTypes.func,
   sortByDateAsc: PropTypes.func,
   filteredBids: PropTypes.array,
-  sortType: PropTypes.string
+  sortType: PropTypes.string,
 };
 
 export default Merchant;
