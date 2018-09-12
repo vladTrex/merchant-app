@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 const SignIn = ({ handleSignIn }) => {
   return (
     <Fragment>
-      <h2>Please Sign In</h2>
+      <h2>Merchant App. - Please Sign In</h2>
       <Button onClick={handleSignIn} variant="contained" color="secondary">
         Click Here
       </Button>
