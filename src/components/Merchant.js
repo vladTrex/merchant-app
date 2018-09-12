@@ -5,9 +5,11 @@ import Button from '@material-ui/core/Button';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import { Link } from 'react-router-dom';
+import isEmpty from 'lodash/isEmpty';
 
 import { StyledHeaderActions, StyledHeaderH1 } from './partials/styles';
 import MerchantList from './partials/MerchantList';
+import Bids from './partials/Bids';
 
 const Merchant = ({
   merchant,
@@ -15,10 +17,16 @@ const Merchant = ({
   onRemoveMerchant,
   setOpenDialog,
   isDialogOpen,
+  sortByTitle,
+  sortByDateAsc,
+  sortByDateDesc,
+  filteredBids,
+  sortType,
 }) => {
   const EditLink = props => (
     <Link to={`/merchant/edit/${merchant.id}`} {...props} />
   );
+  if(isEmpty(merchant)) return null;
   return (
     <div>
       <StyledHeaderActions>
@@ -45,6 +53,14 @@ const Merchant = ({
         </Button>
       </StyledHeaderActions>
       <MerchantList merchant={merchant} />
+      <h2>Bids</h2>
+      <Button variant="flat"
+        color="primary"
+        size="small" onClick={sortByTitle}>Sort by title</Button>
+      <Button variant="flat"
+        color="primary"
+        size="small" onClick={sortType === 'desc'? sortByDateAsc : sortByDateDesc}>{sortType === 'desc'? <strong>Sort by date ascending</strong> : <strong>Sort by date descending</strong>}</Button>
+      <Bids bids={filteredBids} />
 
       <PromptDialog
         handleOk={() => onRemoveMerchant(merchant.id, () => history.push('/'))}
@@ -62,6 +78,11 @@ Merchant.propTypes = {
   setOpenDialog: PropTypes.func,
   onRemoveMerchant: PropTypes.func,
   history: PropTypes.object,
+  sortByTitle: PropTypes.func,
+  sortByDateDesc: PropTypes.func,
+  sortByDateAsc: PropTypes.func,
+  filteredBids: PropTypes.array,
+  sortType: PropTypes.string
 };
 
 export default Merchant;

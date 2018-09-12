@@ -6,17 +6,115 @@
             "email": "john.doe@gmail.com",
             "isPremium": false,
             "phone": "3233231212",
-            "bids": [],
-            "id": "68a0ec5e-4326-4710-92fc-2620bcfd4e8c"
+            "bids": [
+                {
+                    "id": "0fdc9bd5-778b-40d3-a669-3018aefab3ac",
+                    "carTitle": "Audi",
+                    "amount": 12300,
+                    "created": "2018-08-09T17:21:08.728Z"
+                },
+                {
+                    "id": "0fe45add-a50e-4586-a386-bf919de41923",
+                    "carTitle": "Mercedes-Benz",
+                    "amount": 23000,
+                    "created": "2018-05-10T01:02:03.086Z"
+                },
+                {
+                    "id": "473df566-4e81-49d4-87e3-144108c2dd21",
+                    "carTitle": "Opel",
+                    "amount": 5000,
+                    "created": "2018-01-08T01:02:04.089Z"
+                },
+                {
+                    "id": "17921321-113a-4ffd-b6d3-47f18efbf6db",
+                    "carTitle": "Renault",
+                    "amount": 5300,
+                    "created": "2018-05-29T23:08:47.649Z"
+                },
+                {
+                    "id": "257b84d7-0f38-4aa2-afc5-6906759ff78a",
+                    "carTitle": "Ferrari",
+                    "amount": 15300,
+                    "created": "2018-01-03T21:50:42.933Z"
+                },
+                {
+                    "id": "afe40091-7006-4912-8df3-9cffde43c3d4",
+                    "carTitle": "Ferrari Enzo",
+                    "amount": 16300,
+                    "created": "2018-02-03T10:05:15.718Z"
+                },
+                {
+                    "id": "3202ccbc-d600-484f-b312-e0c10b24e59e",
+                    "carTitle": "Ferrari Modena 360",
+                    "amount": 17300,
+                    "created": "2018-02-04T20:10:31.270Z"
+                },
+                {
+                    "id": "1455b7dd-6cf4-4464-840d-c20e1bb449a8",
+                    "carTitle": "Citroen С4",
+                    "amount": 17300,
+                    "created": "2018-01-19T18:20:45.169Z"
+                }
+            ],
+            "id": "02756af1-b862-4f1a-9b6c-6cbbb54ba3ee"
         },
         {
             "firstName": "Jane",
             "lastName": "Doe",
             "email": "jane.doe@gmail.com",
-            "isPremium": true,
+            "isPremium": false,
             "phone": "3233231212",
-            "bids": [],
-            "id": "2407c013-fd74-4e9b-9c89-cde5cca5799e"
+            "bids": [
+                {
+                    "id": "825a288d-496d-4e11-a369-4b4ccda4151c",
+                    "carTitle": "Audi",
+                    "amount": 12300,
+                    "created": "2018-03-16T23:15:26.928Z"
+                },
+                {
+                    "id": "64f7ce3b-827f-4266-a851-d7fbbd5e647c",
+                    "carTitle": "Mercedes-Benz",
+                    "amount": 23000,
+                    "created": "2018-03-24T22:39:18.278Z"
+                },
+                {
+                    "id": "87942602-6270-4d65-9011-e5dcabba918e",
+                    "carTitle": "Opel",
+                    "amount": 5000,
+                    "created": "2018-03-14T18:02:12.912Z"
+                },
+                {
+                    "id": "8760c8d1-8b56-42ab-8271-d0ee8b49e7f2",
+                    "carTitle": "Renault",
+                    "amount": 5300,
+                    "created": "2018-07-07T04:44:28.780Z"
+                },
+                {
+                    "id": "24666415-3f4c-4e30-a901-281d372dde21",
+                    "carTitle": "Ferrari",
+                    "amount": 15300,
+                    "created": "2018-08-05T18:14:00.928Z"
+                },
+                {
+                    "id": "1faac0f8-0657-41ee-a13f-35fb1b43a78d",
+                    "carTitle": "Ferrari Enzo",
+                    "amount": 16300,
+                    "created": "2018-08-02T08:02:56.474Z"
+                },
+                {
+                    "id": "07e54c41-0f9d-43ac-84d9-ce8b0a35a27e",
+                    "carTitle": "Ferrari Modena 360",
+                    "amount": 17300,
+                    "created": "2018-02-25T05:23:29.324Z"
+                },
+                {
+                    "id": "82974b83-6995-41a1-a553-6896ec237fd8",
+                    "carTitle": "Citroen С4",
+                    "amount": 17300,
+                    "created": "2018-06-07T17:12:34.200Z"
+                }
+            ],
+            "id": "ec045a3f-da0d-436b-b986-134f591babc7"
         },
         {
             "firstName": "Otto",
@@ -24,8 +122,57 @@
             "email": "otto.dix@gmail.com",
             "isPremium": false,
             "phone": "3233231212",
-            "bids": [],
-            "id": "b4e1177f-24af-4ee8-82c5-279d6b715956"
+            "bids": [
+                {
+                    "id": "38bdcc95-e492-4764-bf20-694813475f13",
+                    "carTitle": "Audi",
+                    "amount": 12300,
+                    "created": "2018-03-19T04:14:52.163Z"
+                },
+                {
+                    "id": "b51ded73-209e-450f-8f29-a9256c251e6a",
+                    "carTitle": "Mercedes-Benz",
+                    "amount": 23000,
+                    "created": "2018-09-02T04:11:08.921Z"
+                },
+                {
+                    "id": "dfd863e9-ff3d-4877-aae5-92e8be0df8d7",
+                    "carTitle": "Opel",
+                    "amount": 5000,
+                    "created": "2018-05-06T12:43:46.434Z"
+                },
+                {
+                    "id": "fd9ea657-d8c5-4e7a-bdd5-1f516976a7b2",
+                    "carTitle": "Renault",
+                    "amount": 5300,
+                    "created": "2018-07-13T00:57:47.277Z"
+                },
+                {
+                    "id": "8735f2d5-1a4e-422e-b42d-469bd98af4b7",
+                    "carTitle": "Ferrari",
+                    "amount": 15300,
+                    "created": "2018-03-26T04:59:57.412Z"
+                },
+                {
+                    "id": "c7360203-8ae8-436e-86c1-41b987b66b42",
+                    "carTitle": "Ferrari Enzo",
+                    "amount": 16300,
+                    "created": "2018-03-23T09:48:59.850Z"
+                },
+                {
+                    "id": "7e546374-133d-495f-87c2-9bedd863b0de",
+                    "carTitle": "Ferrari Modena 360",
+                    "amount": 17300,
+                    "created": "2018-04-16T02:54:46.455Z"
+                },
+                {
+                    "id": "7d827f16-5607-4415-8b1f-50d0f5640e08",
+                    "carTitle": "Citroen С4",
+                    "amount": 17300,
+                    "created": "2018-04-15T22:09:38.079Z"
+                }
+            ],
+            "id": "d3e18f25-32ac-4053-95b3-7b511aeffab9"
         },
         {
             "firstName": "Barak",
@@ -33,8 +180,57 @@
             "email": "barak.obama@gmail.com",
             "isPremium": false,
             "phone": "3233231212",
-            "bids": [],
-            "id": "ff8f7cd2-d453-4519-9ed4-61bad8fa5db8"
+            "bids": [
+                {
+                    "id": "429dad9c-0c3c-430d-82ef-dd5c2654e5d8",
+                    "carTitle": "Audi",
+                    "amount": 12300,
+                    "created": "2018-03-16T13:53:25.263Z"
+                },
+                {
+                    "id": "fc5bf5be-21bd-4f0b-9bf1-e717482cb634",
+                    "carTitle": "Mercedes-Benz",
+                    "amount": 23000,
+                    "created": "2018-03-02T22:27:01.055Z"
+                },
+                {
+                    "id": "3814958b-d44b-4e09-92b4-d256ebb1dfc2",
+                    "carTitle": "Opel",
+                    "amount": 5000,
+                    "created": "2018-01-23T14:32:58.439Z"
+                },
+                {
+                    "id": "a009e1a2-d468-4389-a482-d73f9775f195",
+                    "carTitle": "Renault",
+                    "amount": 5300,
+                    "created": "2018-04-06T15:12:29.136Z"
+                },
+                {
+                    "id": "06990ce3-d273-41ce-9702-b4e468c6849f",
+                    "carTitle": "Ferrari",
+                    "amount": 15300,
+                    "created": "2018-09-06T21:15:35.782Z"
+                },
+                {
+                    "id": "d64378bd-d726-4a8a-a03a-e478070ed2cf",
+                    "carTitle": "Ferrari Enzo",
+                    "amount": 16300,
+                    "created": "2018-05-26T04:26:30.806Z"
+                },
+                {
+                    "id": "15507320-f4ff-4840-9f24-29362f11c716",
+                    "carTitle": "Ferrari Modena 360",
+                    "amount": 17300,
+                    "created": "2018-06-10T02:09:56.452Z"
+                },
+                {
+                    "id": "9edf253e-9c28-4ce3-ab54-d37995b71bc6",
+                    "carTitle": "Citroen С4",
+                    "amount": 17300,
+                    "created": "2018-04-02T23:52:27.383Z"
+                }
+            ],
+            "id": "251d6b98-a5e9-452a-9a8e-03462543de5f"
         },
         {
             "firstName": "Alex",
@@ -42,8 +238,57 @@
             "email": "alex.doe@gmail.com",
             "isPremium": false,
             "phone": "3233231212",
-            "bids": [],
-            "id": "ec14897f-c061-49b0-b369-7741d39460e1"
+            "bids": [
+                {
+                    "id": "83586f01-f7c1-49a8-aede-cc746fdfea4d",
+                    "carTitle": "Audi",
+                    "amount": 12300,
+                    "created": "2018-01-28T06:59:59.894Z"
+                },
+                {
+                    "id": "0834138a-15a7-4c75-8b14-adfcf82abc98",
+                    "carTitle": "Mercedes-Benz",
+                    "amount": 23000,
+                    "created": "2018-02-26T19:26:03.134Z"
+                },
+                {
+                    "id": "ad0bd6b7-3e5b-45e4-ba7f-045530d0415f",
+                    "carTitle": "Opel",
+                    "amount": 5000,
+                    "created": "2018-08-16T17:18:38.019Z"
+                },
+                {
+                    "id": "6a789daa-aaba-4767-95de-ffeb04303b38",
+                    "carTitle": "Renault",
+                    "amount": 5300,
+                    "created": "2018-08-27T10:36:52.315Z"
+                },
+                {
+                    "id": "683a5c1f-9b1d-4d5f-b7a5-9a7930a5ce66",
+                    "carTitle": "Ferrari",
+                    "amount": 15300,
+                    "created": "2018-01-12T10:31:51.698Z"
+                },
+                {
+                    "id": "8335d2c2-3df0-486b-845b-308f8079a03e",
+                    "carTitle": "Ferrari Enzo",
+                    "amount": 16300,
+                    "created": "2018-07-03T21:57:45.354Z"
+                },
+                {
+                    "id": "a5c6bda9-e118-4b28-85db-a1f158cc944a",
+                    "carTitle": "Ferrari Modena 360",
+                    "amount": 17300,
+                    "created": "2018-08-23T09:56:18.224Z"
+                },
+                {
+                    "id": "56e34462-1f6a-466f-9d68-07b5348d0088",
+                    "carTitle": "Citroen С4",
+                    "amount": 17300,
+                    "created": "2018-08-04T02:47:29.257Z"
+                }
+            ],
+            "id": "00350072-b287-4e5b-a38c-c2ee8ac12aa0"
         }
     ]
 }

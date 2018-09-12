@@ -17,7 +17,7 @@ export const merchants = (state = initialState, action) => {
                 return action.payload;
             });
         case actionTypes.AUTH_SIGN_OUT:
-            return initialState;
+            return [];
     }
     return state;
 };

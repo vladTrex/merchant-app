@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { compose } from 'recompose';
 import v4 from 'uuid/v4';
 
+import AuthHOC from '../HOCs/AuthHOC';
 import { addMerchant } from '../store/actions/merchant';
 import MerchantAddingForm from '../components/MerchantAdding';
 
@@ -24,7 +26,10 @@ MerchantAddingScreen.propTypes = {
   history: PropTypes.object,
 };
 
-export default connect(
-  null,
-  { addMerchant }
+export default compose(
+  AuthHOC,
+  connect(
+    null,
+    { addMerchant }
+  )
 )(MerchantAddingScreen);
