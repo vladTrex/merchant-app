@@ -9,6 +9,10 @@ import { addMerchant } from '../store/actions/merchant';
 import MerchantAddingForm from '../components/MerchantAdding';
 
 class MerchantAddingScreen extends PureComponent {
+  constructor() {
+    super();
+    this.submit = this.submit.bind(this);
+  }
   submit(values) {
     const { addMerchant, history } = this.props;
     const merchantId = v4();
@@ -17,7 +21,7 @@ class MerchantAddingScreen extends PureComponent {
     return history.push(`/merchant/${merchantId}`);
   }
   render() {
-    return <MerchantAddingForm onSubmit={this.submit.bind(this)} />;
+    return <MerchantAddingForm onSubmit={this.submit} />;
   }
 }
 

@@ -11,6 +11,11 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 class MerchantEditingScreen extends PureComponent {
+  constructor() {
+    super();
+
+    this.submit = this.submit.bind(this);
+  }
   submit(merchant) {
     const { onEditMechant, history, match } = this.props;
     const merchantId = match.params.id;
@@ -23,9 +28,7 @@ class MerchantEditingScreen extends PureComponent {
   render() {
     const { merchant } = this.props;
 
-    return (
-      <MerchantEditing merchant={merchant} onSubmit={this.submit.bind(this)} />
-    );
+    return <MerchantEditing merchant={merchant} onSubmit={this.submit} />;
   }
 }
 
