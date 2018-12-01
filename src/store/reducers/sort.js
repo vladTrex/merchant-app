@@ -3,7 +3,7 @@ const initialState = {
     sortingType: '',
 };
 
-export default (state = initialState, action) => {
+export default (state = initialState, action = {}) => {
     switch (action.type) {
         case actionTypes.BID_SORT_BY_TITLE:
             return {
@@ -11,10 +11,6 @@ export default (state = initialState, action) => {
                 sortingType: action.payload
             };
         case actionTypes.BID_SORT_BY_CREATED_DESC:
-            return {
-                ...state,
-                sortingType: action.payload
-            };
         case actionTypes.BID_SORT_BY_CREATED_ASC:
             return {
                 ...state,
